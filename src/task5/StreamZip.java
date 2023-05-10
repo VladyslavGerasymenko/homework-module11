@@ -19,8 +19,10 @@ public class StreamZip {
     public static void main(String[] args) {
         Stream<Integer> stream1 = Stream.of(1, 42, 55, 63, 89);
         Stream<Integer> stream2 = Stream.of(10, 20, 30, 40, 50);
+
         Stream<Integer> zippedStream = zip(stream1, stream2);
-        zippedStream.forEach(System.out::println);
+
+        zippedStream.forEachOrdered(System.out::println);
     }
 }
 
